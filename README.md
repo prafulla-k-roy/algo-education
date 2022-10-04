@@ -6,4 +6,4 @@ In this repository we will try to collect codes of different algorithms performe
 You need to contribute through codes in any of **C++, Java or Python** with proper comments explaining each step. The code should be clean with proper indentation. Check contributing guide to become a contributer.
 
 ## License
-For more information on licensing, please refer to License.
+For more information on licensing, please refer to  <a href = "https://github.com/prafulla-k-roy/algo-education/blob/main/License">License
