@@ -13,7 +13,7 @@ void swap(int &a, int &b){
 	Array representation of a binary tree : 
 	[a,b,c,d] : 
 	
-			a
+		    a
 		   / \
 		  b   c
 		 /  
