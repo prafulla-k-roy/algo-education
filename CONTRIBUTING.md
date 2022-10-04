@@ -33,6 +33,7 @@ Thanks for your contribution.
 - The code should mention all the libraries required to run it.
 - The code should be properly explained through comments.
 - Creating separate function (or method) for algorithm will be appreciated.
+- The file should be named as "algorithm-name_language".
 
 Please note we have a code of conduct, which you shall follow in all your interactions with the project.
 
