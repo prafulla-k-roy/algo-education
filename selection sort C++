@@ -1,7 +1,16 @@
+selection sort is one of the simplest algorithm. here, a smallest value among the unsorted elements of the array is selected during each pass and then it is inserted
+to its appropriate position into the array. It is an in-place sorting algorithm. the array is divided into two parts, first (left side) is sorted part, and another
+one (right side) is the unsorted part. Initially, the sorted part of the array is empty, and unsorted part is the whole array. 
+the first smallest element is selected from the unsorted array and it is placed at the first position. similarly, second smallest element is selected and placed 
+in the second position. The process continues until the array is entirely sorted.
+The average and worst-case complexity of selection sort is O(n2), where n is the number of items. Due to this, it is not suitable for large data sets.
+
+CODE:
+
 #include <bits/stdc++.h>
 using namespace std;
  
-void swap(int *xp, int *yp)
+void swap(int *xp, int *yp) //swapping the elements
 {
     int temp = *xp;
     *xp = *yp;
@@ -15,15 +24,13 @@ void selectionSort(int arr[], int n)
     for (i = 0; i < n-1; i++)
     {
        
-        // Find the minimum element in
-        // unsorted array
+        // Find the minimum element in unsorted array
         min_idx = i;
         for (j = i+1; j < n; j++)
         if (arr[j] < arr[min_idx])
             min_idx = j;
  
-        // Swap the found minimum element
-        // with the first element
+        // Swap the found minimum element with the first element
         if(min_idx!=i)
             swap(&arr[min_idx], &arr[i]);
     }
