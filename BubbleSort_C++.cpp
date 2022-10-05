@@ -47,8 +47,8 @@ void printArray(vector<int> vet) {
 }
 
 int main() {
-  vector<int> vet = { 1, 3, 4, 5, 6, 10, 8, 9 };
-
+  vector<int> vet = { 5, 10, 8, 9, 1, 6, 3, 2, 4 };
+  
   cout << "Initial array: ";
   printArray(vet);
 
