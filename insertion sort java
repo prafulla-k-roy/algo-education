@@ -1,0 +1,54 @@
+Insertion sort builds the final sorted array by inserting one element at a time. Insertion sort iterates taking one input element in each repetition, then
+slowly it grows into a sorted output list. At each iteration, insertion sort takes one element from the input, then finds the best location in the sorted list, 
+and finally inserts it there. this is repeated until no input elements remain. this sorting is typically in-place. 
+At each array-position, it compares the value there against the largest value in the sorted list. If larger, it leaves the element in place and moves to the next.
+If smaller, it finds the correct position within the sorted list and then shifts all the larger values and then inserts it to correct position.
+
+Algorithm
+Step 1 - If the element is the first element, assume that it is already sorted. Return 1.
+Step2 - Pick the next element, and store it separately in a key.
+Step3 - Now, compare the key with all elements in the sorted array.
+Step 4 - If the element in the sorted array is smaller than the current element, then move to the next element. Else, shift greater elements in the array 
+towards the right.
+Step 5 - Insert the value.
+Step 6 - Repeat until the array is sorted.
+
+CODE:
+
+#include <bits/stdc++.h>
+using namespace std;
+  
+void insertionSort(int arr[], int n) 
+{ 
+    int i, key, j; 
+    for (i = 1; i < n; i++)
+    { 
+        key = arr[i]; 
+        j = i - 1; 
+        while (j >= 0 && arr[j] > key)
+        { 
+            arr[j + 1] = arr[j]; 
+            j = j - 1; 
+        } 
+        arr[j + 1] = key; 
+    } 
+} 
+  
+void printArray(int arr[], int n) 
+{ 
+    int i; 
+    for (i = 0; i < n; i++) 
+        cout << arr[i] << " "; 
+    cout << endl;
+} 
+  
+int main() 
+{ 
+    int arr[] = { 12, 11, 13, 5, 6 }; 
+    int N = sizeof(arr) / sizeof(arr[0]); 
+  
+    insertionSort(arr, N); 
+    printArray(arr, N); 
+  
+    return 0; 
+} 
